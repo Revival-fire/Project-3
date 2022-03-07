@@ -1,8 +1,9 @@
 ## SIMPLE TO-DO APPLICATION ON MERN WEB STACK
 
-<In this project, I am tasked to implement a web solution based on MERN stack in AWS Cloud.
+
+In this project, I am tasked to implement a web solution based on MERN stack in AWS Cloud.
 These are the steps i went through to complete this project;
->
+
 
 1. Backend configuration
 2. Install expressjs Models
@@ -11,7 +12,10 @@ These are the steps i went through to complete this project;
 4. Frontend creation
 
 ### Backend Configuration
-<These are the code i used in this step>
+
+
+These are the code i used in this step
+
 
 	` sudo apt install `
 
@@ -20,16 +24,19 @@ These are the steps i went through to complete this project;
 
  	` sudo apt-get install -y nodejs`
 
-<Install Node.js with the command above>
+Install Node.js with the command above
 
 	` sudo apt update`
 
 *Application Code Setup*
 
 	` mkdir Todo`
-<Next, you will use the command>
 
- 	` npm init `   <to initialise your project>
+Next, you will use the command 
+
+ 	` npm init `   
+     
+     to initialise your project
 
 ![initialization of nodejs](./Images/initialization1.PNG)
 
