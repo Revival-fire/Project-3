@@ -307,7 +307,7 @@ Install Axios
 `npm install axios`
 
 ## FRONTEND CREATION (CONTINUED)
- copy and paste the following code execute these set of commands respectively:
+ copy and paste the following code execute accordingly:
 
  `cd src/components`
 `vi ListTodo.js`
@@ -341,7 +341,7 @@ export default ListTodo
 ```
 in the Todo.js file you write the following code
 
-import React, {Component} from 'react';
+```import React, {Component} from 'react';
 import axios from 'axios';
 
 import Input from './Input';
@@ -394,11 +394,9 @@ let { todos } = this.state;
 
 }
 }
-
-export default Todo;
 ```
 
-`cd ..`
+ `cd ..`
 
 
 
@@ -518,8 +516,14 @@ margin-top: 0;
 }
 ```
 
-`vim index.css` enter in the src directory open the index.css 
-body {
+`vim index.css` 
+
+
+
+enter in the src directory open the index.css 
+
+
+```body {
 margin: 0;
 padding: 0;
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -539,7 +543,7 @@ monospace;
 ```
 
 
-`cd ../..`
+` cd ../.. `
 
 `npm run dev`
 
