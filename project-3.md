@@ -12,21 +12,26 @@ These are the steps i went through to complete this project;
 
 ### Backend Configuration
 <These are the code i used in this step>
-'sudo apt update'  
-sudo apt upgrade'
- 'curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -'
 
-<Install Node.js with the command below>
-'sudo apt-get install -y nodejs'
+	`sudo apt install`
+
+    	`sudo apt upgrade`
+
+ 	`sudo apt-get install -y nodejs`
+
+<Install Node.js with the command above>
+
+	`sudo apt update`
 
 *Application Code Setup*
-mkdir Todo 
+
+	`mkdir Todo`
 <Next, you will use the command>
-' npm init'  <to initialise your project>
 
-![intialization of nodejs server](./Images/initialization.PNG )#
+ 	`npm init`   <to initialise your project>
 
-![Initialization of nodejs server](./Images/initialization2.PNG)
+![initialization of nodejs](./Images/initialization1.PNG)
+
 
 
 
