@@ -16,17 +16,17 @@ These are the steps i went through to complete this project;
 	` sudo apt install `
 
 
-    	` sudo apt upgrade `
+    	` sudo apt upgradegit`
 
- 	` sudo apt-get install -y nodejs `
+ 	` sudo apt-get install -y nodejs`
 
 <Install Node.js with the command above>
 
-	` sudo apt update `
+	` sudo apt update`
 
 *Application Code Setup*
 
-	` mkdir Todo `
+	` mkdir Todo`
 <Next, you will use the command>
 
  	` npm init `   <to initialise your project>
