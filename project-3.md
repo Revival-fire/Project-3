@@ -131,7 +131,82 @@ Todo.findOneAndDelete({"_id": req.params.id})
 module.exports = router;
 ```
 
-## MONGODB DATABASE
+### MONGODB DATABASE
+ I created an account with mongoose for nosql database
+ and the connected my server
+
+In the index.js file, we specified process.env to access environment variables, but we have not yet created this file. So we need to do that now.
+
+Create a file in your Todo directory and name it .env.
+
+`touch .env`
+
+`vi .env`
+
+Add the connection string to access the database in it, just as below:
+
+```DB = mongodb+srv://samuel:samuel@sam.lgytw.mongodb.net/samuel?retryWrites=true&w=majority
+```
+Update the index.js to reflect the use of .env so that Node.js can connect to the database.
+
+Open the file with `vim index.js` and add the code 
+below
+
+```const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const routes = require('./routes/api');
+const path = require('path');
+require('dotenv').config();
+
+const app = express();
+
+const port = process.env.PORT || 5000;
+
+//connect to the database
+mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true })
+.then(() => console.log(`Database connected successfully`))
+.catch(err => console.log(err));
+
+//since mongoose promise is depreciated, we overide it with node's promise
+mongoose.Promise = global.Promise;
+
+app.use((req, res, next) => {
+res.header("Access-Control-Allow-Origin", "\*");
+res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+next();
+});
+
+app.use(bodyParser.json());
+
+app.use('/api', routes);
+
+app.use((err, req, res, next) => {
+console.log(err);
+next();
+});
+
+app.listen(port, () => {
+console.log(`Server running on port ${port}`)
+});
+```
+
+Start your server using the command:
+
+`node index.js`
+
+
+## FRONTEND CREATION  
+
+To start out with the frontend of the To-do app, we will use the create-react-app command to scaffold our app.
+
+`npx create-react-app client`
+
+
+
+
+
+
 
 
 
