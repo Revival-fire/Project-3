@@ -79,7 +79,67 @@ For each task, we need to create routes that will define various endpoints that 
 `mkdir routes &&cd routes &&touch api.js &&vim api.js`
 
 Copy and paste 
+
+
 ![content of api.js file](./Images/vi.PNG)
+
+
+Change directory back Todo folder and install Mongoose
+
+`npm install mongoose`
+
+also run this command below
+
+`mkdir models && cd models && touch todo.js`
+
+Open the file created with `vim todo.js` then paste the code below in the file:
+
+![content of todo.js file](./Images/Moongoose.PNG)
+
+Update our routes from the file api.js in ‘routes’ directory with the command below.
+
+```const express = require ('express');
+const router = express.Router();
+const Todo = require('../models/todo');
+
+router.get('/todos', (req, res, next) => {
+
+//this will return all the data, exposing only the id and action field to the client
+Todo.find({}, 'action')
+.then(data => res.json(data))
+.catch(next)
+});
+
+router.post('/todos', (req, res, next) => {
+if(req.body.action){
+Todo.create(req.body)
+.then(data => res.json(data))
+.catch(next)
+}else {
+res.json({
+error: "The input field is empty"
+})
+}
+});
+
+router.delete('/todos/:id', (req, res, next) => {
+Todo.findOneAndDelete({"_id": req.params.id})
+.then(data => res.json(data))
+.catch(next)
+})
+
+module.exports = router;
+The next piece of our application will be the MongoDB Database
+
+PR```
+The next piece of our application will be the MongoDB Database
+
+PR
+
+
+
+
+
 
 
 
