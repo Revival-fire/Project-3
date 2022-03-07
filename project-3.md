@@ -202,6 +202,38 @@ To start out with the frontend of the To-do app, we will use the create-react-ap
 
 `npx create-react-app client`
 
+**Running a React App**
+To run this react there are some dependencies that will catered for by the following commands 
+
+`npm install concurrently --save-dev`
+
+`npm install nodemon --save-dev`
+
+replace 'script' part of the of the content of the 
+package.json file with this codes below
+
+``` 
+"scripts": {
+"start": "node index.js",
+"start-watch": "nodemon index.js",
+"dev": "concurrently \"npm run start-watch\" \"cd client && npm start\""
+},
+```
+
+Add the key value pair in the package.json file by using these codes below
+
+`cd client`
+
+`vi package.json`
+
+` "proxy": "http://localhost:5000"`
+
+
+To see the toto app enter the Todo directory, and simply do:
+`npm run dev`
+Your app should open and start running on 
+gi          `http//localhost:3000`
+
 
 
 
