@@ -40,6 +40,48 @@ Next, you will use the command
 
 ![initialization of nodejs](./Images/initialization1.PNG)
 
+### INSTALL EXPRESSJS  
+
+
+To use express, install it using npm:
+
+`npm install express`
+
+Now create a file index.js with the command below
+
+`touch index.js`
+
+Run ls to confirm that your index.js file is successfully created
+
+Install the dotenv module
+
+`npm install dotenv`
+
+Open the index.js file with the command below
+
+`vim index.js`
+
+Copy and paste this command inside the file
+![Adding content to node.Js file](./Images/Indexjs.PNG)
+
+open your server by typing :
+
+`node index.js`
+
+![node js is running](./Images/nodeindesjs.PNG)
+
+![testing express.Js from the browser](./Images/ExpressJs.PNG)
+
+The  POST, GET, DELETE task will be associated with some particular endpoint and will use different standard HTTP request methods for each task.
+
+For each task, we need to create routes that will define various endpoints that the To-do app will depend on. So let us create a folder routes
+
+`mkdir routes &&cd routes &&touch api.js &&vim api.js`
+
+Copy and paste 
+![content of api.js file](./Images/vi.PNG)
+
+
 
 
 
