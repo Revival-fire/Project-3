@@ -232,8 +232,80 @@ Add the key value pair in the package.json file by using these codes below
 To see the toto app enter the Todo directory, and simply do:
 `npm run dev`
 Your app should open and start running on 
-gi          `http//localhost:3000`
+          `http//localhost:3000`
 
+**Creating your React Components**
+
+In creating react components run the following codes
+
+`cd client`
+`cd src`
+`mkdir components`
+`cd components`
+
+`touch Input.js ListTodo.js Todo.js`
+
+Open Input.js file
+
+`vi Input.js`
+
+Copy and paste the following
+
+```import React, { Component } from 'react';
+import axios from 'axios';
+
+class Input extends Component {
+
+state = {
+action: ""
+}
+
+addTodo = () => {
+const task = {action: this.state.action}
+
+    if(task.action && task.action.length > 0){
+      axios.post('/api/todos', task)
+        .then(res => {
+          if(res.data){
+            this.props.getTodos();
+            this.setState({action: ""})
+          }
+        })
+        .catch(err => console.log(err))
+    }else {
+      console.log('input field required')
+    }
+
+}
+
+handleChange = (e) => {
+this.setState({
+action: e.target.value
+})
+}
+
+render() {
+let { action } = this.state;
+return (
+<div>
+<input type="text" onChange={this.handleChange} value={action} />
+<button onClick={this.addTodo}>add todo</button>
+</div>
+)
+}
+}
+
+export default Input
+```
+Move to the src folder
+
+`cd ..`
+Move to clients folder
+
+`cd ..`
+Install Axios
+
+`npm install axios`
 
 
 
