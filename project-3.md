@@ -298,13 +298,12 @@ return (
 export default Input
 ```
 Move to the src folder
-
 `cd ..`
+
 Move to clients folder
-
 `cd ..`
-Install Axios
 
+Install Axios
 `npm install axios`
 
 
